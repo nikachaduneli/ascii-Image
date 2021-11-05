@@ -3,7 +3,6 @@ from PIL import Image
 from tkinter.filedialog import askopenfilename
 
 
-
 # choose image file
 image_path =  askopenfilename()
 img = Image.open(image_path)
@@ -17,7 +16,6 @@ new_width = 180
 new_height = aspect_ratio * new_width * 0.46
 img = img.resize((new_width, int(new_height)))
 
-
 # convert image to greyscale format
 img = img.convert("L")
 
@@ -25,7 +23,6 @@ pixels = img.getdata()
 
 # replace each pixel with a character from array
 chars = [',', ':', '!', '/', '*', '%', '$', '&', '#', '@','Ø']
- 
 
 new_pixels = [chars[pixel//25] for pixel in pixels]
 new_pixels = ''.join(new_pixels)
@@ -37,5 +34,6 @@ ascii_image = "\n".join(ascii_image)
 print(ascii_image)
 
 # write to a text file.
-with open("ascii_image.txt", "w") as f:
+save_path = fl.asksaveasfilename()
+with open(save_path+'txt', 'w') as f:
     f.write(ascii_image)
