@@ -1,4 +1,5 @@
 # ascii-Image
 
-it needs pillow and tkinter librarys to work. 
-after execution result will be stored in text file.
+It needs pillow and tkinter libraries to work.
+
+After execution result will be stored in text file.
