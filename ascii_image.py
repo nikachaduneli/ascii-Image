@@ -35,5 +35,5 @@ print(ascii_image)
 
 # write to a text file.
 save_path = fl.asksaveasfilename()
-with open(save_path+'txt', 'w') as f:
+with open(save_path+'.txt', 'w') as f:
     f.write(ascii_image)
