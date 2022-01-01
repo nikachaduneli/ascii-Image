@@ -1,7 +1,7 @@
 # ascii-Image
 
 
-prgoram displays image by ascii characters.
+program displays image by ascii characters.
 
 It needs pillow and tkinter libraries to work.
 
